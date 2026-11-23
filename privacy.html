@@ -1,54 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - AutoPoster Studio</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; }
-        header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: #cc0000; }
-        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        footer { margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9em; color: #666; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Sundanese96 AutoPoster Studio accesses, uses, stores and shares data, and how to revoke access or request deletion.">
+  <title>Privacy Policy | Sundanese96 AutoPoster Studio</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>AutoPoster Studio</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-        </nav>
-    </header>
+  <header class="site-header wrap">
+    <a class="brand" href="./"><img src="logo.png" alt="" width="40" height="40"> Sundanese96 AutoPoster Studio</a>
+    <nav aria-label="Main navigation">
+      <a href="./">Home</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+  <main class="wrap policy">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated November 24, 2026</p>
+    <p>Sundanese96 maintains Sundanese96 AutoPoster Studio, a private desktop application that uses YouTube API Services to upload and schedule videos and retrieve analytics for YouTube channels the operator authorizes. This policy describes the desktop application and this public information site.</p>
 
-    <main>
-        <h2>Privacy Policy</h2>
-        <p><em>Last updated: November 23, 2026</em></p>
+    <h2>Data the app accesses and how it uses it</h2>
+    <ul>
+      <li><strong>Google authorization.</strong> Google handles sign-in and consent. The app receives OAuth access and refresh tokens to make the YouTube requests described below and renew authorization for future runs. Google handles the account password on its sign-in page.</li>
+      <li><strong>Channel and video data.</strong> The app reads the connected channel’s identifier, name, uploads playlist and channel statistics. It reads recent video IDs, titles, publication dates and counts such as views, likes and comments. This data confirms the selected channel, identifies uploads and displays channel and video status.</li>
+      <li><strong>Files and publishing settings.</strong> The app reads the selected video, thumbnail and metadata from folders configured by the operator. It sends the video, optional thumbnail, title, description, tags, category, language, audience and visibility settings, and any scheduled release time to YouTube. YouTube returns the video ID used to show the upload result and prevent duplicate uploads.</li>
+      <li><strong>YouTube Analytics and Reporting.</strong> Analytics commands request channel and video performance data, including views, watch time, average view duration and percentage viewed, subscriber changes and aggregate viewer country. The reporting command can list or create a YouTube reporting job and download report data for the operator to inspect.</li>
+      <li><strong>Connection checks.</strong> Some upload runs check the connection’s public IP and approximate country using IPinfo, ifconfig.me or api.myip.com. These services receive the ordinary network request and its source IP address. The requests carry no YouTube data, OAuth token or media. The app can also start or stop the operator’s installed Windscribe VPN when enabled.</li>
+    </ul>
 
-        <p>AutoPoster Studio ("the Application") is an internal desktop automation tool used by the developer to upload creative media to authorized YouTube channels. We respect your privacy and handle user data strictly in accordance with Google API Services User Data Policy.</p>
+    <h2>Storage and retention</h2>
+    <p>The app saves credentials in per-channel JSON files in the operator’s configured project storage. It also stores channel configuration, upload history, quota records and an upload status file in the relevant content folder. These records can include channel labels and titles, video IDs and URLs, upload timestamps and local folder paths. The app resets its quota tracker when it next runs on a new UTC date. The app keeps upload history and status records until the operator removes them. If the operator places those folders in a sync service, that service can retain copies.</p>
+    <p>Analytics and report results are fetched on demand and displayed or printed by the desktop app. The operator can save command output separately. This public GitHub Pages site contains public information about the app and has no app account, upload form or connection to the desktop token files.</p>
 
-        <h3>1. Data We Access and Store</h3>
-        <p>The Application accesses the YouTube Data API v3 using user-granted OAuth 2.0 authorization tokens. Specifically:</p>
-        <ul>
-            <li><strong>Authentication Tokens:</strong> OAuth2 access and refresh tokens are stored locally on the user's personal computer. No tokens or credentials are ever sent to external third-party servers.</li>
-            <li><strong>Channel Data:</strong> The application queries basic channel identity (title, ID) solely to confirm target upload destinations.</li>
-            <li><strong>Content Upload:</strong> Video files, descriptions, titles, and thumbnails stored locally on the user's system are pushed directly to YouTube API endpoints.</li>
-        </ul>
+    <h2>Sharing and use limits</h2>
+    <p>The desktop app sends OAuth requests to Google and exchanges media, publishing settings, channel information and report requests with the relevant YouTube APIs. YouTube handles uploaded videos according to the selected visibility setting, including release to the public when the operator selects public visibility. Google’s handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>Use of Google user data is limited to providing the authorization, publishing, duplicate prevention and reporting functions described here. Sundanese96 does not sell Google user data or use it for advertising, profiling or training AI models.</p>
 
-        <h3>2. Google API Compliance</h3>
-        <p>AutoPoster Studio's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <h2>Revoking access and deleting data</h2>
+    <p>To disconnect the desktop app, open <a href="https://security.google.com/settings/security/permissions">Google Account permissions</a> using the account that granted access and remove the app’s connection. Stop any scheduled desktop runs for the channel and remove its credential file and related local configuration and upload records, including any copies you keep in synced folders. You can also request help deleting stored app data by emailing the address below.</p>
+    <p>Manage or delete videos already uploaded to YouTube in <a href="https://studio.youtube.com/">YouTube Studio</a>. Removing local app records or revoking access leaves those uploads in your YouTube channel until you take action there.</p>
 
-        <h3>3. Data Sharing and Third Parties</h3>
-        <p>We do not sell, rent, disclose, or transfer any user data, tokens, or video materials to any external parties or advertising networks. All network operations occur exclusively between the user's local machine and Google's official endpoints (googleapis.com).</p>
-
-        <h3>4. Contact</h3>
-        <p>If you have any questions about this Privacy Policy, please contact: <strong>aldikholil24@gmail.com</strong></p>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 AutoPoster Studio. All rights reserved.</p>
-    </footer>
+    <h2>Contact</h2>
+    <p>For privacy questions, data access or deletion requests, contact <a href="mailto:aldikholil24@gmail.com">aldikholil24@gmail.com</a>.</p>
+  </main>
+  <footer class="wrap site-footer">
+    <span>Sundanese96 AutoPoster Studio</span>
+    <a href="terms.html">Terms of Service</a>
+  </footer>
 </body>
 </html>
