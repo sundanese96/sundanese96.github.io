@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="How Sundanese96 AutoPoster Studio accesses, uses, stores and shares data, and how to revoke access or request deletion.">
   <title>Privacy Policy | Sundanese96 AutoPoster Studio</title>
+  <link rel="canonical" href="https://sundanese96.github.io/privacy.html">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,30 +18,40 @@
     </nav>
   </header>
   <main class="wrap policy">
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated November 24, 2026</p>
-    <p>Sundanese96 maintains Sundanese96 AutoPoster Studio, a private desktop application that uses YouTube API Services to upload and schedule videos and retrieve analytics for YouTube channels the operator authorizes. This policy describes the desktop application and this public information site.</p>
+    <h1>Sundanese96 AutoPoster Studio Privacy Policy</h1>
+    <p class="updated">Last updated <time datetime="2026-11-24">November 24, 2026</time></p>
+    <p>Sundanese96 maintains Sundanese96 AutoPoster Studio, a Windows desktop app for uploading and scheduling finished videos and retrieving performance data for authorized YouTube channels. The desktop app uses YouTube API Services. This policy explains what it collects or accesses, how it uses and stores that data, and how the operator can revoke access and delete records.</p>
 
-    <h2>Data the app accesses and how it uses it</h2>
+    <h2>Google user data and why the app needs it</h2>
     <ul>
-      <li><strong>Google authorization.</strong> Google handles sign-in and consent. The app receives OAuth access and refresh tokens to make the YouTube requests described below and renew authorization for future runs. Google handles the account password on its sign-in page.</li>
-      <li><strong>Channel and video data.</strong> The app reads the connected channel’s identifier, name, uploads playlist and channel statistics. It reads recent video IDs, titles, publication dates and counts such as views, likes and comments. This data confirms the selected channel, identifies uploads and displays channel and video status.</li>
-      <li><strong>Files and publishing settings.</strong> The app reads the selected video, thumbnail and metadata from folders configured by the operator. It sends the video, optional thumbnail, title, description, tags, category, language, audience and visibility settings, and any scheduled release time to YouTube. YouTube returns the video ID used to show the upload result and prevent duplicate uploads.</li>
-      <li><strong>YouTube Analytics and Reporting.</strong> Analytics commands request channel and video performance data, including views, watch time, average view duration and percentage viewed, subscriber changes and aggregate viewer country. The reporting command can list or create a YouTube reporting job and download report data for the operator to inspect.</li>
-      <li><strong>Connection checks.</strong> Some upload runs check the connection’s public IP and approximate country using IPinfo, ifconfig.me or api.myip.com. These services receive the ordinary network request and its source IP address. The requests carry no YouTube data, OAuth token or media. The app can also start or stop the operator’s installed Windscribe VPN when enabled.</li>
+      <li><strong>Google authorization.</strong> Google handles sign-in, passwords, and consent on its own pages. When the operator grants access, the desktop app receives an OAuth access token and refresh token. The app uses them to call the authorized YouTube APIs and renew access for later runs.</li>
+      <li><strong>YouTube channel and video data.</strong> The app reads the connected channel’s ID, name, uploads playlist, and counts such as subscribers and views. It reads recent video IDs, titles, publication dates, and counts such as views, likes, and comments. The app uses this data to confirm which channel is connected, find recent uploads, and display channel and video status.</li>
+      <li><strong>YouTube Analytics and Reporting.</strong> At the operator’s request, the app retrieves channel and video performance data, including watch time, average view duration, audience retention, subscriber changes, and aggregate viewer country. It can list or create a reporting job and download report data for the operator to inspect.</li>
     </ul>
 
-    <h2>Storage and retention</h2>
-    <p>The app saves credentials in per-channel JSON files in the operator’s configured project storage. It also stores channel configuration, upload history, quota records and an upload status file in the relevant content folder. These records can include channel labels and titles, video IDs and URLs, upload timestamps and local folder paths. The app resets its quota tracker when it next runs on a new UTC date. The app keeps upload history and status records until the operator removes them. If the operator places those folders in a sync service, that service can retain copies.</p>
-    <p>Analytics and report results are fetched on demand and displayed or printed by the desktop app. The operator can save command output separately. This public GitHub Pages site contains public information about the app and has no app account, upload form or connection to the desktop token files.</p>
+    <h2>Files and settings supplied by the operator</h2>
+    <p>The app reads the video, thumbnail, and metadata from the content folder the operator selects. For an upload, it sends the video, optional thumbnail, title, description, tags, category, language, audience and visibility settings, and any scheduled release time to YouTube. YouTube returns a video ID that the app uses to report success, build the video URL, and prevent duplicate uploads.</p>
 
-    <h2>Sharing and use limits</h2>
-    <p>The desktop app sends OAuth requests to Google and exchanges media, publishing settings, channel information and report requests with the relevant YouTube APIs. YouTube handles uploaded videos according to the selected visibility setting, including release to the public when the operator selects public visibility. Google’s handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-    <p>Use of Google user data is limited to providing the authorization, publishing, duplicate prevention and reporting functions described here. Sundanese96 does not sell Google user data or use it for advertising, profiling or training AI models.</p>
+    <h2>Storage, protection, and retention</h2>
+    <p>The app communicates with Google and YouTube APIs over HTTPS. It saves tokens in per-channel JSON files in the operator’s configured project storage. Access to these files depends on the operator’s device and storage permissions. If those directories are synchronized, the sync provider can retain copies. The public website has no access to these files.</p>
+    <ul>
+      <li><strong>Credentials and settings.</strong> The app keeps each channel’s credential file and configuration in project storage for later runs. The channel title may be saved in that configuration.</li>
+      <li><strong>Upload records.</strong> The app keeps an upload history and an upload status file in each processed content folder. Records can contain the channel label and title, video ID and URL, upload time, and local content path. The app keeps these records until the operator removes them. The quota tracker starts a new record when the app next runs on a new UTC date.</li>
+      <li><strong>Analytics and report output.</strong> The app retrieves these results on demand and shows them in the terminal. The operator can save a copy of that output separately.</li>
+    </ul>
+
+    <h2>Who receives the data</h2>
+    <p>Google receives authorization and token requests. YouTube receives the selected media, publishing settings, and channel, analytics, and report requests. YouTube controls access to uploaded videos according to the chosen visibility setting, including release to the public when the operator chooses public visibility. See the <a href="https://www.google.com/policies/privacy">Google Privacy Policy</a>.</p>
+    <p>Some runs check the public IP address and approximate country of the operator’s connection using IPinfo, ifconfig.me, or api.myip.com. Those services receive the network request and source IP address. The requests contain no Google user data, OAuth tokens, or media. The app can also start or stop the operator’s installed Windscribe VPN when enabled.</p>
+    <p>The desktop app uses Google user data for channel authorization, publishing, duplicate prevention, and reporting. The app does not sell that data, use it for advertising or AI training, or send it to the connection-check services. The public GitHub Pages site presents the app’s documentation and contains no sign-in form, upload form, or app analytics scripts.</p>
 
     <h2>Revoking access and deleting data</h2>
-    <p>To disconnect the desktop app, open <a href="https://security.google.com/settings/security/permissions">Google Account permissions</a> using the account that granted access and remove the app’s connection. Stop any scheduled desktop runs for the channel and remove its credential file and related local configuration and upload records, including any copies you keep in synced folders. You can also request help deleting stored app data by emailing the address below.</p>
-    <p>Manage or delete videos already uploaded to YouTube in <a href="https://studio.youtube.com/">YouTube Studio</a>. Removing local app records or revoking access leaves those uploads in your YouTube channel until you take action there.</p>
+    <ol>
+      <li>Open <a href="https://security.google.com/settings/security/permissions">Google Account permissions</a> with the account that granted access, select Sundanese96 AutoPoster Studio, and remove its access.</li>
+      <li>Stop any scheduled desktop runs for the disconnected channel. Remove the corresponding token file, channel configuration, upload-history entries, and upload status records from the desktop app’s storage. Remove any copies kept separately or in synced folders.</li>
+      <li>To request help accessing or deleting stored app data, email the contact below. Identify the channel involved so the operator can locate its records.</li>
+    </ol>
+    <p>Videos already uploaded remain in the YouTube channel. To manage or delete those videos, use <a href="https://studio.youtube.com/">YouTube Studio</a>.</p>
 
     <h2>Contact</h2>
     <p>For privacy questions, data access or deletion requests, contact <a href="mailto:aldikholil24@gmail.com">aldikholil24@gmail.com</a>.</p>

@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sundanese96 AutoPoster Studio is a desktop tool for uploading and scheduling videos and reviewing performance on YouTube channels managed by the operator.">
   <title>Sundanese96 AutoPoster Studio</title>
+  <meta name="application-name" content="Sundanese96 AutoPoster Studio">
+  <meta name="description" content="Sundanese96 AutoPoster Studio is a Windows desktop app for uploading and scheduling videos and reviewing analytics for authorized YouTube channels.">
+  <link rel="canonical" href="https://sundanese96.github.io/">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,24 +22,27 @@
     <section class="hero" aria-labelledby="app-name">
       <img class="hero-logo" src="logo.png" alt="" width="96" height="96">
       <h1 id="app-name">Sundanese96 AutoPoster Studio</h1>
-      <p>A private desktop tool for uploading and scheduling videos and Shorts on YouTube channels the operator owns or manages.</p>
+      <p>A Windows desktop app by Sundanese96 for uploading and scheduling videos and Shorts on YouTube and reviewing channel performance.</p>
+      <p><a href="privacy.html" style="color: inherit">Read the Privacy Policy</a></p>
     </section>
     <section class="section">
-      <h2>How the app works</h2>
-      <ol>
-        <li><strong>Prepare a video.</strong> The operator selects a content folder on their computer with a finished video, metadata and an optional thumbnail.</li>
-        <li><strong>Authorize a channel.</strong> The desktop app opens Google’s consent screen to connect to the channel the operator manages. This homepage is publicly readable.</li>
-        <li><strong>Upload or schedule.</strong> The app sends the video and its settings to YouTube using the YouTube Data API. The operator selects the channel, content, visibility and any scheduled release time.</li>
-        <li><strong>Check performance.</strong> The operator can request channel and video statistics, including views, watch time and audience retention, through the desktop app.</li>
-      </ol>
+      <h2>What the app does</h2>
+      <p>Sundanese96 AutoPoster Studio helps the operator publish finished videos to YouTube channels they own or manage. The operator selects a content folder, destination channel, video metadata, optional thumbnail, and visibility or release time. The desktop app can preview the metadata and then send the selected files and settings to YouTube.</p>
+      <p>The operator can also check recent uploads and see channel and video statistics such as views, watch time, and audience retention from the desktop app.</p>
     </section>
     <section class="section">
-      <h2>Why the app requests access</h2>
-      <p>The app uses Google authorization to identify the connected YouTube channel, upload the operator’s videos and thumbnails, and retrieve performance data for that channel. The <a href="privacy.html">Privacy Policy</a> explains the data the app accesses, where it is stored and how to revoke access.</p>
+      <h2>Why the app requests Google access</h2>
+      <ul>
+        <li><strong>Connect the selected channel.</strong> Google OAuth 2.0 lets the desktop app identify and act on the YouTube channel the operator authorizes.</li>
+        <li><strong>Publish videos.</strong> The YouTube Data API receives the selected video, thumbnail, and publishing settings and returns the video ID.</li>
+        <li><strong>Show channel performance.</strong> The YouTube Analytics and Reporting APIs provide statistics and reports for the authorized channel.</li>
+      </ul>
+      <p>Anyone can read this website without signing in. The desktop app opens Google’s consent screen when the operator connects a channel. The <a href="privacy.html">Privacy Policy</a> explains which data the desktop app uses, how it stores that data, and how to revoke access.</p>
     </section>
     <section class="section">
       <h2>Permitted use</h2>
-      <p>The app uploads media prepared by the operator. Use is limited to content the operator has the rights and permissions to publish. The <a href="terms.html">Terms of Service</a> prohibit using the app or its Google API access to create, upload or distribute non-consensual intimate imagery, including AI-generated imagery.</p>
+      <p>The app sends finished files supplied by the operator. It has no image or video generation feature. The operator must have the rights and permissions to publish those files.</p>
+      <p>The <a href="terms.html">Terms of Service</a> prohibit using the app or its Google API access to create, upload, or distribute AI-generated non-consensual intimate imagery (AI NCII) or any other non-consensual intimate imagery. Use of the APIs is subject to the <a href="https://developers.google.com/terms">Google APIs Terms of Service</a>.</p>
     </section>
   </main>
   <footer class="wrap site-footer">
